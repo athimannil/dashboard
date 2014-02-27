@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/font-awesome.css">
 </head>
 <body>
-
 <aside id="side-bar">
   <figure id="profile">
     <a href="#"><img class="img-circle" src="img/me.jpg" width="130" height="130" alt="Maanu Manjeri"></a>
