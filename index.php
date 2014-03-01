@@ -212,6 +212,14 @@
           <li class="list-group-item"><i class="fa fa-lg fa-square-o"></i>
             Great a think <span class="label label-info pull-right">Postponed</span></li>
           <li class="list-group-item tick"><i class="fa fa-lg fa-check-square"></i>Nothing to type</li>
+          <!-- <li class="list-group-item"> -->
+            <div class="input-group">
+              <input type="text" class="form-control" id="new-todo">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+              </span>
+            </div>
+          <!-- </li> -->
         </ul>
       </div>
     </div>

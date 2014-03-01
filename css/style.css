@@ -166,8 +166,15 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 #to-do .tick {
   text-decoration: line-through;
   color: #eb6a5a; }
-#to-do i {
+#to-do li i, #to-do a i {
   margin-right: 5px; }
+#to-do .input-group input {
+  border-bottom-left-radius: 4px;
+  border-right: none; }
+#to-do .input-group button {
+  border-top-right-radius: 0; }
+#to-do .focus-todo button {
+  background-color: #eb6a5a; }
 
 #mess-table {
   padding-top: 25px;
