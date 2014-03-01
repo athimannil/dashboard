@@ -51,6 +51,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8">
+        <i class="fa fa-rocket"></i>
         <h1 style="margin-top:0;"><i class="fa fa-dashboard"></i> Dashboard</h1>
         <h2 style="margin-top:0;"><i class="fa fa-dashboard"></i> Dashboard</h2>
       </div>
@@ -111,6 +112,52 @@
             <i class="fa fa-bar-chart-o fa-3x"></i>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="box">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, illum, repellat dolores animi et cum fugit porro quia quibusdam nobis ullam quasi molestiae ab nesciunt rerum commodi voluptatum asperiores! Necessitatibus!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, illum, repellat dolores animi et cum fugit porro quia quibusdam nobis ullam quasi molestiae ab nesciunt rerum commodi voluptatum asperiores! Necessitatibus!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, illum, repellat dolores animi et cum fugit porro quia quibusdam nobis ullam quasi molestiae ab nesciunt rerum commodi voluptatum asperiores! Necessitatibus!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, illum, repellat dolores animi et cum fugit porro quia quibusdam nobis ullam quasi molestiae ab nesciunt rerum commodi voluptatum asperiores! Necessitatibus!</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <ul id="to-do" class="list-group checkbox-list">
+          <a class="list-group-item active"><i class="fa fa-lg fa-list-alt"></i> To Do List</a>
+          <li class="list-group-item checkbox">
+            <input type="checkbox" id="to-do1">
+            <label class="check-lab" for="to-do1">Some thing to do</label>
+            <span class="label label-danger pull-right">Tomorrow</span>
+          </li>
+          <li class="list-group-item checkbox">
+            <input type="checkbox" id="to-do2" checked>
+            <label class="check-lab" for="to-do2">Nothing to do</label>
+          </li>
+          <li class="list-group-item checkbox">
+            <input type="checkbox" id="to-do3">
+            <label class="check-lab" for="to-do3">Meeting at 9 PM</label>
+            <span class="label label-default pull-right">Default</span>
+          </li>
+          <li class="list-group-item checkbox">
+            <input type="checkbox" id="to-do4" checked>
+            <label class="check-lab" for="to-do4">Whole cleaning home</label>
+            <span class="label label-info pull-right">Postponed</span>
+          </li>
+          <li class="list-group-item checkbox">
+            <input type="checkbox" id="to-do5">
+            <label class="check-lab" for="to-do5">Verude oru rasam</label>
+          </li>
+          <!-- <li class="list-group-item"> -->
+            <div class="input-group">
+              <input type="text" class="form-control" id="new-todo" placeholder="Enter To Do">
+              <span class="input-group-btn">
+                <button id="add-todo" class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+              </span>
+            </div>
+          <!-- </li> -->
+        </ul>
       </div>
     </div>
     <div class="row">
@@ -201,17 +248,37 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 hide">
         <ul id="to-do" class="list-group">
           <a class="list-group-item active"><i class="fa fa-lg fa-list-alt"></i>To Do List</a>
-          <li class="list-group-item"><i class="fa fa-lg fa-square-o"></i>
-            Spart ds lfds <span class="label label-danger pull-right">Tomorrow</span></li>
-          <li class="list-group-item"><i class="fa fa-lg fa-square-o"></i>
-            Clear fdfs <span class="label label-default pull-right">Default</span></li>
-          <li class="list-group-item tick"><i class="fa fa-lg fa-check-square"></i>Kooy</li>
-          <li class="list-group-item"><i class="fa fa-lg fa-square-o"></i>
-            Great a think <span class="label label-info pull-right">Postponed</span></li>
-          <li class="list-group-item tick"><i class="fa fa-lg fa-check-square"></i>Nothing to type</li>
+          <li class="list-group-item checkbox">
+            <label><input type="checkbox">
+              <i class="fa fa-lg fa-square-o"></i>
+            Spart ds lfds 
+            </label>
+            <span class="label label-danger pull-right">Tomorrow</span></li>
+          <li class="list-group-item checkbox">
+            <label><input type="checkbox">
+              <i class="fa fa-lg fa-square-o"></i>
+            Clear fdfs 
+            </label>
+            <span class="label label-default pull-right">Default</span></li>
+          <li class="list-group-item tick checkbox">
+            <label><input type="checkbox">
+              <i class="fa fa-lg fa-check-square"></i>Kooy
+            </label>
+          </li>
+          <li class="list-group-item checkbox">
+            <label><input type="checkbox">
+              <i class="fa fa-lg fa-square-o"></i>
+            Great a think 
+            </label>
+            <span class="label label-info pull-right">Postponed</span></li>
+          <li class="list-group-item tick checkbox">
+            <label><input type="checkbox">
+              <i class="fa fa-lg fa-check-square"></i>Nothing to type
+            </label>
+          </li>
           <!-- <li class="list-group-item"> -->
             <div class="input-group">
               <input type="text" class="form-control" id="new-todo">
@@ -224,6 +291,7 @@
       </div>
     </div>
   </div>
+
 
 
 </div>

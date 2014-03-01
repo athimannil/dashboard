@@ -1,5 +1,6 @@
 body {
-  background-color: #F1F1F1; }
+  background-color: #F1F1F1;
+  color: #525252; }
 
 .box {
   border: 1px solid #DDD;
@@ -163,11 +164,6 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   height: 7px;
   margin: 5px 0; }
 
-#to-do .tick {
-  text-decoration: line-through;
-  color: #eb6a5a; }
-#to-do li i, #to-do a i {
-  margin-right: 5px; }
 #to-do .input-group input {
   border-bottom-left-radius: 4px;
   border-right: none; }
@@ -233,3 +229,18 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
   margin-right: -5px; }
 #card-accordion .panel-default .panel-heading {
   background: transparent; }
+
+.checkbox-list .checkbox {
+  color: #666;
+  margin-top: 0; }
+.checkbox-list input[type=checkbox] {
+  display: none; }
+.checkbox-list input[type=checkbox] + label:before {
+  content: "\f096";
+  letter-spacing: 7px; }
+.checkbox-list input[type=checkbox]:checked + label {
+  text-decoration: line-through;
+  color: #eb6a5a; }
+.checkbox-list input[type=checkbox]:checked + label:before {
+  content: "\f046";
+  letter-spacing: 4px; }
