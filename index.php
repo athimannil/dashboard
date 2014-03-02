@@ -51,7 +51,6 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8">
-        <i class="fa fa-rocket"></i>
         <h1 style="margin-top:0;"><i class="fa fa-dashboard"></i> Dashboard</h1>
         <h2 style="margin-top:0;"><i class="fa fa-dashboard"></i> Dashboard</h2>
       </div>

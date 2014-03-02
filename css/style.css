@@ -131,9 +131,9 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 
 .quick-info {
   color: #FFF;
-  padding: 20px; }
-  .quick-info h2 {
-    margin-top: 0; }
+  padding: 20px;
+  margin-bottom: 15px h2;
+    margin-bottom-margin-top: 0; }
   .quick-info .info-icon {
     position: absolute;
     top: 20px;
@@ -244,3 +244,23 @@ ul.nav li.dropdown:hover > ul.dropdown-menu {
 .checkbox-list input[type=checkbox]:checked + label:before {
   content: "\f046";
   letter-spacing: 4px; }
+
+#members .members {
+  padding: 10px;
+  margin-right: -10px;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  position: relative; }
+  #members .members:first-child {
+    margin-top: -10px;
+    background-color: #F7F9FA;
+    text-align: right; }
+  #members .members:hover {
+    background-color: #F7F9FA; }
+  #members .members figure {
+    margin-right: 20px; }
+
+#member-settings {
+  position: absolute;
+  right: 10px;
+  top: 10px; }
