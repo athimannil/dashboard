@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>Room home page</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap-select.css">
   <link rel="stylesheet" href="css/font-awesome.css">
 </head>
 <body>
@@ -60,7 +61,7 @@
           <li><a href="#settings-password" data-toggle="tab"><i class="fa fa-key"></i> Password</a></li>
         </ul>
         <div class="tab-content">
-          <div id="users" class="box tab-pane active">
+          <div id="users" class="box tab-pane">
             <div class="row">
               <div class="col-md-6">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, quisquam, magni inventore hic aut eligendi cumque maxime exercitationem provident accusantium tenetur minima vitae error sed saepe? Libero, perferendis in delectus!</p>
@@ -184,19 +185,16 @@
               <div class="col-md-12">
                 <div id="mess-table">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-3">
                       Records per page
-                      <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:80px; margin-right:20px;">
-                          <span class="pull-left">10</span><span class="caret pull-right" style="margin-top:7px;"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">10</a></li>
-                          <li><a href="#">25</a></li>
-                          <li><a href="#">50</a></li>
-                          <li><a href="#">100</a></li>
-                        </ul>
-                      </div>
+                      <select class="selectpicker" data-width="80px">
+                        <option value="10"10></option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
                       Search <input type="text" class="form-control input-sm" placeholder="Search item" style="display: inline-block; width: 145px;">
                     </div>
                   </div>
@@ -348,103 +346,182 @@
               </div>
             </div>
           </div>
-          <div id="cutlery" class="box tab-pane">
-            <form class="form-horizontal" role="form">
+          <div id="cutlery" class="box tab-pane active">
             <div class="row">
-              <div class="col-md-3">
-                <strong>Contact details</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, doloremque, officiis, rem asperiores incidunt pariatur cum molestiae eligendi ducimus quaerat adipisci corporis earum repudiandae eaque tenetur nisi minima quae optio!</p>
+              <div class="col-md-2">
+                <strong>Monday</strong>
               </div>
-              <div class="col-md-9">
+              <div class="col-md-3">
                 <div class="form-group">
-                  <label for="first-name" class="col-sm-2 control-label">First Name</label>
-                  <div class="col-sm-6"><input type="text" id="first-name" class="form-control"></div>
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
                 </div>
+              </div>
+              <div class="col-md-3">
                 <div class="form-group">
-                  <label for="last-name" class="col-sm-2 control-label">Last Name</label>
-                  <div class="col-sm-6"><input type="text" id="last-name" class="form-control"></div>
-                </div>
-                <div class="form-group">
-                  <label for="gender" class="col-sm-2 control-label">Gender</label>
-                  <div class="col-sm-6"><input type="text" class="form-control" id="gender"></div>
-                </div>
-                <div class="form-group">
-                  <label for="dob" class="col-sm-2 control-label">Date of birth</label>
-                  <div class="col-sm-6"><input type="date" class="form-control" id="dob"></div>
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
                 </div>
               </div>
             </div>
             <div class="row">
-              <hr>
-              <div class="col-md-3">
-                <strong>Contact details</strong>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, doloremque, officiis, rem asperiores incidunt pariatur cum molestiae eligendi ducimus quaerat adipisci corporis earum repudiandae eaque tenetur nisi minima quae optio!</p>
+              <div class="col-md-2">
+                <strong>Tuesday</strong>
               </div>
-              <div class="col-md-9">
-                <div class="row">
-                  <div class="col-md-6">
-                    <label for="inputPhone">Phone</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                      <input type="text" placeholder="01234567897" class="form-control" id="inputPhone">
-                    </div>
-                    <div class="separator bottom"></div>
-
-                    <label for="inputMobile">Mobile</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
-                      <input type="text" placeholder="01234567897" class="form-control" id="inputMobile">
-                    </div>
-                    <div class="separator bottom"></div>
-                      
-                    <label for="inputEmail">E-mail</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                      <input type="text" placeholder="contact@mosaicpro.biz" class="form-control" id="inputEmail">
-                    </div>
-                    <div class="separator bottom"></div>
-                    
-                    <label for="inputWebsite">Website</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-link"></i></span>
-                      <input type="text" placeholder="http://www.mosaicpro.biz" class="form-control" id="inputWebsite">
-                    </div>
-                    <div class="separator bottom"></div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputFacebook">Facebook</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
-                      <input type="text" placeholder="mosaicpro" class="form-control" id="inputFacebook">
-                    </div>
-                    <div class="separator bottom"></div>
-                    
-                    <label for="inputTwitter">Twitter</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
-                      <input type="text" placeholder="mosaicpro" class="form-control" id="inputTwitter">
-                    </div>
-                    <div class="separator bottom"></div>
-                    
-                    <label for="inputSkype">Skype ID</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-skype"></i></span>
-                      <input type="text" placeholder="mySkypeID" class="form-control" id="inputSkype">
-                    </div>
-                    <div class="separator bottom"></div>
-                    
-                    <label for="inputgplus">Google</label>
-                    <div class="input-group">
-                      <span class="input-group-addon"><i class="fa fa-google-plus"></i></span>
-                      <input type="text" placeholder="google ID" class="form-control" id="inputgplus">
-                    </div>
-                    <div class="separator bottom"></div>
-                  </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
                 </div>
               </div>
             </div>
-              <p>.form-group>label.col-sm-2.control-label+.col-sm-6>input.form-control</p>
-            </form>
+            <div class="row">
+              <div class="col-md-2">
+                <strong>Wednesday</strong>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <strong>Thursday</strong>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <strong>Friday</strong>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <strong>Saturday</strong>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <strong>Sunday</strong>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <select class="selectpicker" data-width="100%">
+                    <option>MS Athimannil</option>
+                    <option>Muhsin Manniyil</option>
+                    <option>Prince Roshan</option>
+                    <option>Mohasin Moorkote</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
           <div id="settings-payment" class="box tab-pane">
             <h4>Payment & Billing Information</h4>
@@ -530,7 +607,7 @@
                                     <label for="">Expirty date</label>
                                     <div class="row">
                                       <div class="col-md-6">
-                                        <select name="" id="" class="form-control">
+                                        <select class="selectpicker" data-width="100%">
                                           <option value="">01</option>
                                           <option value="">02</option>
                                           <option value="">03</option>
@@ -546,7 +623,7 @@
                                         </select>
                                       </div>
                                       <div class="col-md-6">
-                                        <select name="" id="" class="form-control">
+                                        <select class="selectpicker" data-width="100%">
                                           <option value="">2011</option>
                                           <option value="">2012</option>
                                           <option value="">2013</option>
@@ -636,6 +713,7 @@
 </div>
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
 <script src="js/core.js"></script>
 </body>
 </body>

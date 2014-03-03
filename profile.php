@@ -7,6 +7,7 @@
 	<title>Room home page</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-select.css">
   <link rel="stylesheet" href="css/font-awesome.css">
 </head>
 <body>
@@ -484,23 +485,23 @@
                                     <label for="">Expirty date</label>
                                     <div class="row">
                                       <div class="col-md-6">
-                                        <select name="" id="" class="form-control">
-                                          <option value="">01</option>
-                                          <option value="">02</option>
-                                          <option value="">03</option>
-                                          <option value="">04</option>
-                                          <option value="">05</option>
-                                          <option value="">06</option>
-                                          <option value="">07</option>
-                                          <option value="">08</option>
-                                          <option value="">09</option>
-                                          <option value="">10</option>
-                                          <option value="">11</option>
-                                          <option value="">12</option>
+                                        <select class="selectpicker">
+                                          <option value="01">01</option>
+                                          <option value="02">02</option>
+                                          <option value="03">03</option>
+                                          <option value="04">04</option>
+                                          <option value="05">05</option>
+                                          <option value="06">06</option>
+                                          <option value="07">07</option>
+                                          <option value="08">08</option>
+                                          <option value="09">09</option>
+                                          <option value="10">10</option>
+                                          <option value="11">11</option>
+                                          <option value="12">12</option>
                                         </select>
                                       </div>
                                       <div class="col-md-6">
-                                        <select name="" id="" class="form-control">
+                                        <select class="selectpicker">
                                           <option value="">2011</option>
                                           <option value="">2012</option>
                                           <option value="">2013</option>
@@ -510,7 +511,7 @@
                                           <option value="">2017</option>
                                           <option value="">2018</option>
                                           <option value="">2019</option>
-                                          <option value="">20110</option>
+                                          <option value="">2020</option>
                                         </select>
                                       </div>
                                     </div>
@@ -590,6 +591,7 @@
 </div>
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
 <script src="js/core.js"></script>
 </body>
 </body>

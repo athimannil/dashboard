@@ -7,6 +7,7 @@
 	<title>Room home page</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-select.css">
   <link rel="stylesheet" href="css/font-awesome.css">
 </head>
 <body>
@@ -60,17 +61,12 @@
           <div class="row">
             <div class="col-md-7">
               Records per page
-              <div class="btn-group btn-group-sm">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:80px; margin-right:20px;">
-                  <span class="pull-left">10</span><span class="caret pull-right" style="margin-top:7px;"></span>
-                </button>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">10</a></li>
-                  <li><a href="#">25</a></li>
-                  <li><a href="#">50</a></li>
-                  <li><a href="#">100</a></li>
-                </ul>
-              </div>
+              <select name="" id="" class="selectpicker">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
               Search <input type="text" class="form-control input-sm" placeholder="Search item" style="display: inline-block; width: 145px;">
             </div>
             <div class="col-md-5">
@@ -242,6 +238,7 @@
 </div>
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
 <script src="js/core.js"></script>
 </body>
 </body>
