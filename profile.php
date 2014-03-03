@@ -239,17 +239,12 @@
                   <div class="row">
                     <div class="col-md-12">
                       Records per page
-                      <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="width:80px; margin-right:20px;">
-                          <span class="pull-left">10</span><span class="caret pull-right" style="margin-top:7px;"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">10</a></li>
-                          <li><a href="#">25</a></li>
-                          <li><a href="#">50</a></li>
-                          <li><a href="#">100</a></li>
-                        </ul>
-                      </div>
+                      <select class="selectpicker" data-width="80px">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                      </select>
                       Search <input type="text" class="form-control input-sm" placeholder="Search item" style="display: inline-block; width: 145px;">
                     </div>
                   </div>
@@ -485,7 +480,7 @@
                                     <label for="">Expirty date</label>
                                     <div class="row">
                                       <div class="col-md-6">
-                                        <select class="selectpicker">
+                                        <select class="selectpicker" data-width="100%">
                                           <option value="01">01</option>
                                           <option value="02">02</option>
                                           <option value="03">03</option>
@@ -501,7 +496,7 @@
                                         </select>
                                       </div>
                                       <div class="col-md-6">
-                                        <select class="selectpicker">
+                                        <select class="selectpicker" data-width="100%">
                                           <option value="">2011</option>
                                           <option value="">2012</option>
                                           <option value="">2013</option>

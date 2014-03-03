@@ -59,9 +59,9 @@
       <div class="col-md-12">
         <div id="mess-table" class="box">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-6">
               Records per page
-              <select name="" id="" class="selectpicker">
+              <select class="selectpicker" data-width="80px">
                 <option value="10">10</option>
                 <option value="25">25</option>
                 <option value="50">50</option>
@@ -69,7 +69,7 @@
               </select>
               Search <input type="text" class="form-control input-sm" placeholder="Search item" style="display: inline-block; width: 145px;">
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
               <div class="btn-group pull-right">
                 <button type="button" class="btn btn-default"><i class="fa fa-plus"></i> Add</button>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
