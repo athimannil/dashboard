@@ -34,8 +34,26 @@
   </nav>
 </aside>
 <div id="content">
-  <header class="container-fluid">
+  <header>
+
     <a id="toggle-button" class="btn btn-primary pull-left"><i class="fa fa-bars fa-lg"></i></a>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+      <!-- <ul class="nav navbar-nav navbar-right"> -->
+        <div  class="dropdown pull-right">
+          <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a> -->
+          <a id="sign-menu" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-menu-right"  aria-labelledby="sign-menu" role="menu">
+            <li><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
+            <li><a href="settings.html"><i class="fa fa-gear"></i> Settings</a></li>
+            <li class="divider"></li>
+            <li><a href="logout.html"><i class="fa fa-power-off"></i> Logout</a></li>
+          </ul>
+        </div>
+      <!-- </ul> -->
+    <!-- </div> -->
+<div class="clearfix"></div>
     <div id="login-menu" class="dropdown pull-right">
       <a data-toggle="dropdown" href="#"> 
         <img class="img-circle" src="img/me.jpg" width="30" height="30" alt="Maanu Manjeri">
@@ -249,46 +267,11 @@
           </li>
         </ul>
       </div>
-      <div class="col-md-4 hide">
-        <ul id="to-do" class="list-group">
-          <a class="list-group-item active"><i class="fa fa-lg fa-list-alt"></i>To Do List</a>
-          <li class="list-group-item checkbox">
-            <label><input type="checkbox">
-              <i class="fa fa-lg fa-square-o"></i>
-            Spart ds lfds 
-            </label>
-            <span class="label label-danger pull-right">Tomorrow</span></li>
-          <li class="list-group-item checkbox">
-            <label><input type="checkbox">
-              <i class="fa fa-lg fa-square-o"></i>
-            Clear fdfs 
-            </label>
-            <span class="label label-default pull-right">Default</span></li>
-          <li class="list-group-item tick checkbox">
-            <label><input type="checkbox">
-              <i class="fa fa-lg fa-check-square"></i>Kooy
-            </label>
-          </li>
-          <li class="list-group-item checkbox">
-            <label><input type="checkbox">
-              <i class="fa fa-lg fa-square-o"></i>
-            Great a think 
-            </label>
-            <span class="label label-info pull-right">Postponed</span></li>
-          <li class="list-group-item tick checkbox">
-            <label><input type="checkbox">
-              <i class="fa fa-lg fa-check-square"></i>Nothing to type
-            </label>
-          </li>
-          <!-- <li class="list-group-item"> -->
-            <div class="input-group">
-              <input type="text" class="form-control" id="new-todo">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
-              </span>
-            </div>
-          <!-- </li> -->
-        </ul>
+      <div class="col-md-4">
+        <div class="box">
+          <h3>half donut for limit alert</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, consectetur, accusantium, perspiciatis ad maxime quos dolores voluptate eum facilis beatae ipsum enim natus earum cum quisquam. Laudantium, alias tenetur fuga.</p>
+        </div>
       </div>
     </div>
   </div>
