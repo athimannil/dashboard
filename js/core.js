@@ -16,3 +16,12 @@ $(document).ready(function () {
     }
   });
 });
+
+// speedometer
+  var g = new JustGage({
+    id: "spedometer", 
+    value: 645, 
+    min: 0,
+    max: 2450,
+    relativeGaugeSize: true
+  }); 
