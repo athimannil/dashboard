@@ -233,13 +233,16 @@ header {
   margin-top: 0; }
 .checkbox-list input[type=checkbox] {
   display: none; }
-.checkbox-list input[type=checkbox] + label:before {
+.checkbox-list input[type=checkbox] + label:before,
+.checkbox-list input[type=checkbox] + span:before {
   content: "\f096";
   letter-spacing: 7px; }
-.checkbox-list input[type=checkbox]:checked + label {
-  text-decoration: line-through;
+.checkbox-list input[type=checkbox]:checked + label,
+.checkbox-list input[type=checkbox]:checked + span {
+  /*text-decoration: line-through;*/
   color: #eb6a5a; }
-.checkbox-list input[type=checkbox]:checked + label:before {
+.checkbox-list input[type=checkbox]:checked + label:before,
+.checkbox-list input[type=checkbox]:checked + span:before {
   content: "\f046";
   letter-spacing: 4px; }
 
