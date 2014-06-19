@@ -35,9 +35,7 @@
 </aside>
 <div id="content">
   <header>
-
     <a id="toggle-button" class="btn btn-primary pull-left"><i class="fa fa-bars fa-lg"></i></a>
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
       <!-- <ul class="nav navbar-nav navbar-right"> -->
@@ -133,21 +131,45 @@
         </div>
       </div>
     </div>
+
     <div class="row">
-      <div class="col-md-4 col-sm-6">
-        <div class="box">
-          <div id="spedometer"></div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add Expense</h3>
+          </div>
+          <div class="panel-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="Product">Item Name</label>
+                <input type="text" class="form-control" id="Product" placeholder="Eg: Sugar">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="product-value">Price</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">£</span>
+                      <input type="text" class="form-control" placeholder="0.00">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="prchase-date">Who paid ?</label>
+                    <select class="selectpicker" data-width="100%">
+                      <option>MS Athimannil</option>
+                      <option>Muhsin Manniyil</option>
+                      <option>Prince Roshan</option>
+                      <option>Mohasin Moorkote</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary pull-right">
+                <i class="fa fa-plus"></i> Add to mess</button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="col-md-8 col-sm-6">
-        <div class="box">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, illum, repellat dolores animi et cum fugit porro quia quibusdam nobis ullam quasi molestiae ab nesciunt rerum commodi voluptatum asperiores! Necessitatibus!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, illum, repellat dolores animi et cum fugit porro quia quibusdam nobis ullam quasi molestiae ab nesciunt rerum commodi voluptatum asperiores! Necessitatibus!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, illum, repellat dolores animi et cum fugit porro quia quibusdam nobis ullam quasi molestiae ab nesciunt rerum commodi voluptatum asperiores! Necessitatibus!</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
       <div class="col-md-4">
         <ul id="to-do" class="list-group checkbox-list">
           <a class="list-group-item active"><i class="fa fa-lg fa-list-alt"></i> To Do List</a>
@@ -185,38 +207,9 @@
         </ul>
       </div>
       <div class="col-md-4">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3 class="panel-title">Quick add to list</h3>
-          </div>
-          <div class="panel-body">
-            <form role="form">
-              <div class="form-group">
-                <label for="Product">Product name</label>
-                <input type="text" class="form-control" id="Product" placeholder="Enter name">
-              </div>
-              <div class="form-group">
-                <div class="row">
-                  <div class="col-md-8">
-                    <label for="prchase-date">Date</label>
-                    <input type="text" class="form-control" id="prchase-date" placeholder="Date">
-                  </div>
-                  <div class="col-md-4">
-                    <label for="product-value">Value</label>
-                    <input type="text" class="form-control" id="product-value" placeholder="Price">
-                  </div>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary pull-right">
-                <i class="fa fa-plus"></i> Add to mess</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
         <ul class="nav nav-tabs nav-justified">
-          <li class="active"><a href="#"><strong><i class="fa fa-hand-o-left fa-lg"></i> Last month</strong></a></li>
-          <li><a href="#"><strong><i class="fa fa-clock-o fa-lg"></i> Recent</strong></a></li>
+          <li class="active"><a href="#"><strong><i class="fa fa-clock-o fa-lg"></i> This month</strong></a></li>
+          <li><a href="#"><strong><i class="fa fa-hand-o-left fa-lg"></i> Last month</strong></a></li>
         </ul>
         <ul id="last-pay" class="list-group">
           <li href="#" class="list-group-item">
@@ -280,8 +273,6 @@
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-select.js"></script>
-<script src="js/raphael-min.js"></script>
-<script src="js/justgage.js"></script>
 <script src="js/core.js"></script>
 </body>
 </body>
