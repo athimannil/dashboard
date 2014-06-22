@@ -16,18 +16,3 @@ $(document).ready(function () {
     }
   });
 });
-
-// spedometer
-var g = new JustGage({
-  id: "spedometer",
-  title: "Monthly expense",
-  value: 1986, 
-  min: 0,
-  max: 2450,
-  shadowOpacity: 0,
-  relativeGaugeSize: true
-});
-
-
-
-
