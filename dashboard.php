@@ -20,7 +20,7 @@
 <div class="row">
   <div class="col-sm-6 col-md-3">
     <div id="mess-info" class="box quick-info">
-      <h2><i class="fa fa-gbp"></i> 1320.90</h2>
+      <h2>{{lastspend | currency:"£"}}</h2>
       <h5>This month bill so far</h5>
       <span><i class="fa fa-arrow-circle-o-down"></i>
         7% Less than last month</span>
@@ -31,7 +31,7 @@
   </div>
   <div class="col-sm-6 col-md-3">
     <div id="buy-info" class="box quick-info">
-      <h2><i class="fa fa-gbp"></i> 192.43</h2>
+      <h2 ng-repeat="user in users" ng-if="user.id === currentuser">{{ user.spent | currency:"£"}}</h2>
       <h5>Contribution in this month</h5>
       <span><i class="fa fa-arrow-circle-o-up"></i>
         3% Higher than last month</span>
@@ -42,7 +42,7 @@
   </div>
   <div class="col-sm-6 col-md-3">
     <div id="average-info" class="box quick-info">
-      <h2><i class="fa fa-gbp"></i> 607.00</h2>
+      <h2>{{totalamount/todolist.length | currency:"£"}}</h2>
       <h5>Average bill could be</h5>
       <span><i class="fa fa-arrow-circle-o-right"></i>
         same amount as last month</span>
@@ -53,7 +53,7 @@
   </div>
   <div class="col-sm-6 col-md-3">
     <div id="total-info" class="box quick-info">
-      <h2><i class="fa fa-gbp"></i> 2156.67</h2>
+      <h2>{{totalamount | currency:"£"}}</h2>
       <h5>Total bill for all</h5>
       <span><i class="fa fa-arrow-circle-o-up"></i>
         3% Higher than last month</span>
@@ -143,56 +143,18 @@
       <li><a href="#"><strong><i class="fa fa-hand-o-left fa-lg"></i> Last month</strong></a></li>
     </ul>
     <ul id="last-pay" class="list-group">
-      <li href="#" class="list-group-item">
-        <span class="badge progress-bar-success">34%</span>
+
+      <li class="list-group-item" ng-repeat="user in users">
+        <span class="badge progress-bar-warning">{{percentage(user.spent, totalamount)}}%</span>
         <img src="img/me.jpg" alt="member" height="40" width="40" class="img-circle pull-left">
-        Muhamed Athimannil
+        {{user.firstname}} {{user.lastname}}
         <div class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-            <span class="sr-only">40% Complete (success)</span>
-          </div>
-        </div>
-      </li>
-      <li href="#" class="list-group-item">
-        <span class="badge progress-bar-info">76%</span>
-        <img src="img/me.jpg" alt="member" height="40" width="40" class="img-circle pull-left">
-        Roshan Ismail
-        <div class="progress">
-          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-            <span class="sr-only">20% Complete</span>
-          </div>
-        </div>
-      </li>
-      <li href="#" class="list-group-item">
-        <span class="badge progress-bar-warning">38%</span>
-        <img src="img/me.jpg" alt="member" height="40" width="40" class="img-circle pull-left">
-        Muhsin Manniyil
-        <div class="progress">
-          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-            <span class="sr-only">60% Complete (warning)</span>
-          </div>
-        </div>
-      </li>
-      <li href="#" class="list-group-item">
-        <span class="badge progress-bar-danger">14%</span>
-        <img src="img/me.jpg" alt="member" height="40" width="40" class="img-circle pull-left">
-        Mohasin Moorkote
-        <div class="progress">
-          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-            <span class="sr-only">80% Complete</span>
-          </div>
-        </div>    
-      </li>
-      <li href="#" class="list-group-item">
-        <span class="badge progress-bar-info">42%</span>
-        <img src="img/me.jpg" alt="member" height="40" width="40" class="img-circle pull-left">
-        Usharif Kalathingal
-        <div class="progress">
-          <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-            <span class="sr-only">20% Complete</span>
+          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{percentage(user.spent, totalamount)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage(user.spent, totalamount)}}%">
+            <span class="sr-only">{{percentage(user.spent, totalamount)}}% Complete (warning)</span>
           </div>
         </div>
       </li>
     </ul>
   </div>
+
 </div>

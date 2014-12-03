@@ -2,7 +2,7 @@
   include_once 'header.php';
   include_once 'side-menu.php';
 ?>
-<div id="content">
+<div id="content" ng-controller="roomController">
   <?php
     include_once 'mainmenu.php';
   ?>
