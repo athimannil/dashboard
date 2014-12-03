@@ -70,10 +70,10 @@
         <h3 class="panel-title">Add Expense</h3>
       </div>
       <div class="panel-body">
-        <form role="form">
+        <form role="form" ng-submit="addtolist()">
           <div class="form-group">
             <label for="Product">Item Name</label>
-            <input type="text" class="form-control" id="Product" placeholder="Eg: Sugar">
+            <input type="text" class="form-control" id="Product" placeholder="Eg: Sugar" ng-model="newitem.name">
           </div>
           <div class="form-group">
             <div class="row">
@@ -81,7 +81,7 @@
                 <label for="product-value">Price</label>
                 <div class="input-group">
                   <span class="input-group-addon">£</span>
-                  <input type="text" class="form-control" placeholder="0.00">
+                  <input type="text" class="form-control" placeholder="0.00" ng-model="newitem.price">
                 </div>
               </div>
               <div class="col-md-6">
@@ -99,7 +99,6 @@
             <i class="fa fa-plus"></i> Add to mess</button>
         </form>
       </div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet sit eius delectus ex labore, eligendi facilis et ipsa! Possimus fugiat, quasi qui ab molestiae perspiciatis, est perferendis at impedit!</p>
     </div>
   </div>
   <div class="col-md-4">
