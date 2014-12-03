@@ -42,7 +42,7 @@
   </div>
   <div class="col-sm-6 col-md-3">
     <div id="average-info" class="box quick-info">
-      <h2>{{totalamount/todolist.length | currency:"£"}}</h2>
+      <h2>{{totalamount/users.length | currency:"£"}}</h2>
       <h5>Average bill could be</h5>
       <span><i class="fa fa-arrow-circle-o-right"></i>
         same amount as last month</span>
@@ -99,42 +99,30 @@
             <i class="fa fa-plus"></i> Add to mess</button>
         </form>
       </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet sit eius delectus ex labore, eligendi facilis et ipsa! Possimus fugiat, quasi qui ab molestiae perspiciatis, est perferendis at impedit!</p>
     </div>
   </div>
   <div class="col-md-4">
     <ul id="to-do" class="list-group checkbox-list">
       <a class="list-group-item active"><i class="fa fa-lg fa-list-alt"></i> To Do List</a>
-      <li class="list-group-item checkbox">
-        <input type="checkbox" id="to-do1">
-        <label class="check-lab" for="to-do1">Some thing to do</label>
-        <span class="label label-danger pull-right">Tomorrow</span>
+      <li class="list-group-item checkbox" ng-repeat=" todo in todolist">
+        <label>
+          <input type="checkbox" class="hide" ng-model="todo.done">
+          <i class="fa fa-lg" ng-class="{true:'fa-check-square-o', false:'fa-square-o'}[todo.done]"></i>
+          <span class="todo-task">{{todo.task}}</span>
+        </label>
+        <span class="label label-default pull-right" ng-repeat="info in users" ng-if="info.id === todo.asignedto">{{info.firstname}}</span>
       </li>
-      <li class="list-group-item checkbox">
-        <input type="checkbox" id="to-do2" checked>
-        <label class="check-lab" for="to-do2">Nothing to do</label>
-      </li>
-      <li class="list-group-item checkbox">
-        <input type="checkbox" id="to-do3">
-        <label class="check-lab" for="to-do3">Meeting at 9 PM</label>
-        <span class="label label-default pull-right">Default</span>
-      </li>
-      <li class="list-group-item checkbox">
-        <input type="checkbox" id="to-do4" checked>
-        <label class="check-lab" for="to-do4">Whole cleaning home</label>
-        <span class="label label-info pull-right">Postponed</span>
-      </li>
-      <li class="list-group-item checkbox">
-        <input type="checkbox" id="to-do5">
-        <label class="check-lab" for="to-do5">Verude oru rasam</label>
-      </li>
-      <!-- <li class="list-group-item"> -->
-        <div class="input-group">
-          <input type="text" class="form-control" id="new-todo" placeholder="Enter To Do">
+      <li class="list-group-item" style="border:none; padding:0;">
+        <form ng-submit="addtodo()" class="input-group">
+          <input type="text" class="form-control" ng-model="newtodo">
           <span class="input-group-btn">
-            <button id="add-todo" class="btn btn-default" type="button"><i class="fa fa-plus"></i></button>
+            <button class="btn btn-primary" type="submit">
+              <i class="fa fa-plus"></i>
+            </button>
           </span>
-        </div>
-      <!-- </li> -->
+        </form>
+      </li>
     </ul>
   </div>
   <div class="col-md-4">
@@ -156,5 +144,4 @@
       </li>
     </ul>
   </div>
-
 </div>
