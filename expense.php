@@ -78,7 +78,7 @@
             </td>
           </tfoot>
           <tbody>
-            <tr ng-repeat="item in items | orderBy : 'rate' | startFrom:currentpage*pageSize | limitTo:pageSize">
+            <tr ng-repeat="item in items | startFrom:currentpage*pageSize | limitTo:pageSize">
               <td>
                 <label class="check-lab">
                   <input type="checkbox">
@@ -95,7 +95,7 @@
               </td>
               <td>
                 <span ng-show="editmode == false">{{item.rate | currency:"£"}}</span>
-                <input type="text" ng-model="item.rate" ng-show="editmode">
+                <input type="number" ng-model="item.rate" ng-show="editmode">
               </td>
               <td>
                 <span ng-repeat="user in users" ng-if="user.id === item.member" ng-show="editmode == false">{{user.firstname}} {{user.lastname}}</span>
