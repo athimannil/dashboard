@@ -99,7 +99,6 @@ app.controller('roomController', function($scope){
 	$scope.totalpages = function (argument) {
 		return Math.ceil($scope.items.length/$scope.pageSize);
 	};
-
 	$scope.addtolist = function () {
 		$scope.items.push({product: $scope.newitem.name, date: '03-Dec-2014', rate: $scope.newitem.price, member: $scope.currentuser, status: 'pending' });
 		$scope.newitem = '';
@@ -116,6 +115,18 @@ app.controller('roomController', function($scope){
     	return num.toFixed(2);
     };
 	$scope.totalamount = $scope.sum($scope.users, 'spent');
+// $scope.recur
+	$scope.recurbills = [
+		{id: 1, recurterm:'Yearly', fixed: true, type:'Rent deposit', amount: 1200, due: '12-12-2014'},
+		{id: 2, recurterm:'Monthly', fixed: true, type:'Council Tax', amount: 321.80, due: '12-12-2014'},
+		{id: 3, recurterm:'Monthly', fixed: false, type:'Electricity', amount: 112.20, due: '12-12-2014'},
+		{id: 4, recurterm:'Monthly', fixed: false, type:'Gas', amount: 101, due: '12-12-2014'},
+		{id: 5, recurterm:'Monthly', fixed: false, type:'Broadband', amount: 23.50, due: '12-12-2014'},
+	];
+	$scope.recurbill = function () {
+		$scope.recurbills.push({recurterm: $scope.addrecur.recurterm, fixed: $scope.addrecur.fixed, type: $scope.addrecur.type, amount: $scope.addrecur.amount, due: $scope.addrecur.due});
+		$scope.addrecur = '';
+	};
 });
 app.filter('percentage', ['$filter', function ($filter) {
 	return function (input, decimals) {
