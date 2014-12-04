@@ -25,7 +25,7 @@ app.controller('roomController', function($scope){
 	    { product: '1 Lorem ipsum', date: '12-March-2013', rate: 12.35, member: 1, status: 'approved' },
 	    { product: '2 dolor sit', date: '1-January-2011', rate: 60.54, member: 3, status: 'pending'},
 	    { product: '3 consectetur', date: '12-December-2014', rate: 12.56, member: 1, status: 'pending'},
-	    { product: '4 adipisicing', date: '14-November-2014', rate: 0.99, member: 1, status: 'approved'},
+	    { product: '4 adipisicing', date: '14-November-2014', rate: 0.99, member: 1, status: 'pending'},
 	    { product: '5 do eiusmod', date: '2-November-2014', rate: 4.00, member: 2, status: 'approved'},
 	    { product: '6 magna aliqua', date: '16-February-2014', rate: 6.54, member: 2, status: 'approved'},
 	    { product: '7 exercitation', date: '30-November-2014', rate: 60.32, member: 2, status: 'pending'},
@@ -39,7 +39,7 @@ app.controller('roomController', function($scope){
 	    { product: '14 Lorem ipsum', date: '12-March-2013', rate: 12.35, member: 1, status: 'approved' },
 	    { product: '15 dolor sit', date: '1-January-2011', rate: 60.54, member: 3, status: 'pending'},
 	    { product: '16 consectetur', date: '12-December-2014', rate: 12.56, member: 1, status: 'pending'},
-	    { product: '17 adipisicing', date: '14-November-2014', rate: 0.99, member: 1, status: 'approved'},
+	    { product: '17 adipisicing', date: '14-November-2014', rate: 0.99, member: 1, status: 'denied'},
 	    { product: '18 do eiusmod', date: '2-November-2014', rate: 4.00, member: 2, status: 'approved'},
 	    { product: '19 magna aliqua', date: '16-February-2014', rate: 6.54, member: 2, status: 'approved'},
 	    { product: '20 exercitation', date: '30-November-2014', rate: 60.32, member: 2, status: 'pending'},
@@ -55,7 +55,7 @@ app.controller('roomController', function($scope){
 	    { product: '30 consectetur', date: '12-December-2014', rate: 12.56, member: 1, status: 'pending'},
 	    { product: '31 adipisicing', date: '14-November-2014', rate: 0.99, member: 1, status: 'approved'},
 	    { product: '32 do eiusmod', date: '2-November-2014', rate: 4.00, member: 2, status: 'approved'},
-	    { product: '33 magna aliqua', date: '16-February-2014', rate: 6.54, member: 2, status: 'approved'},
+	    { product: '33 magna aliqua', date: '16-February-2014', rate: 6.54, member: 2, status: 'denied'},
 	    { product: '34 exercitation', date: '30-November-2014', rate: 60.32, member: 2, status: 'pending'},
 	    { product: '35 consequat', date: '5-May-2014', rate: 5.12, member: 1, status: 'denied'},
 	    { product: '36 reprehenderit', date: '12-April-2014', rate: 8.99, member: 5, status: 'approved'},
@@ -64,9 +64,42 @@ app.controller('roomController', function($scope){
 	    { product: '39 occaecat cupidatat', date: '21-June-2014', rate: 99.54, member: 3, status: 'pending'},
 	    { product: '40 proident', date: '31-December-2014', rate: 15.50, member: 2, status: 'denied'},
 	    { product: '42 culpa qui', date: '1-November-2014', rate: 34.05, member: 1, status: 'pending'},
-	    { product: '43 culpa qui', date: '1-November-2014', rate: 34.05, member: 1, status: 'pending'},
+	    { product: '43 culpa qui', date: '1-November-2014', rate: 34.05, member: 1, status: 'denied'},
 	    { product: '44 mollit anim', date: '3-November-2014', rate: 45.00, member: 4, status: 'approved'}
 	];
+	$scope.editmode = false;
+	// limit page items
+    $scope.currentpage = 0;
+    $scope.pageSize = 10;
+    $scope.pagelist = function (start, end) {
+        var ret = [];
+    	start = $scope.totalpages();
+        if (!end) {
+            end = start;
+            start = 0;
+        }
+        for (var i = start; i < end; i++) {
+            ret.push(i);
+        }
+        return ret;
+    };
+	$scope.prevlist = function () {
+		if ($scope.currentpage > 0) {
+			$scope.currentpage--;
+		}
+	};
+	$scope.nextlist = function () {
+		if($scope.currentpage <= ($scope.items.length/$scope.pageSize - 1)){
+			$scope.currentpage++;
+		}
+	};
+	$scope.showlist = function (argument) {
+		$scope.currentpage = argument;
+	};
+	$scope.totalpages = function (argument) {
+		return Math.ceil($scope.items.length/$scope.pageSize);
+	};
+
 	$scope.addtolist = function () {
 		$scope.items.push({product: $scope.newitem.name, date: '03-Dec-2014', rate: $scope.newitem.price, member: $scope.currentuser, status: 'pending' });
 		$scope.newitem = '';
@@ -88,7 +121,12 @@ app.filter('percentage', ['$filter', function ($filter) {
 	return function (input, decimals) {
 		return $filter('number')(input * 100, decimals) + '%';
 	};
-}]); 
+}]);
+app.filter('startFrom', function () {
+    return function (input, start) {
+        return input.slice(start);
+    };
+});
 
 
 })();
