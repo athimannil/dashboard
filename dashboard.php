@@ -81,16 +81,13 @@
                 <label for="product-value">Price</label>
                 <div class="input-group">
                   <span class="input-group-addon">£</span>
-                  <input type="text" class="form-control" placeholder="0.00" ng-model="newitem.price">
+                  <input type="number" class="form-control" placeholder="0.00" ng-model="newitem.price">
                 </div>
               </div>
               <div class="col-md-6">
                 <label for="prchase-date">Who paid ?</label>
-                <select class="selectpicker" data-width="100%">
-                  <option>MS Athimannil</option>
-                  <option>Muhsin Manniyil</option>
-                  <option>Prince Roshan</option>
-                  <option>Mohasin Moorkote</option>
+                <select ng-model="user.lastname" ng-options="user.lastname for user in users">
+                  <option value="">-- choose name --</option>
                 </select>
               </div>
             </div>
