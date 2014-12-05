@@ -27,7 +27,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-3">
               <div class="form-group">
                 <label for="bill-date">Due date</label>
                 <div class="input-group">
@@ -36,7 +36,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <div class="form-group">
                 <label for="prchase-date">Bill type</label>
                 <div class="input-group" style="display:block;">
