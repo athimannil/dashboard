@@ -4,24 +4,24 @@
       <div class="row">
         <div class="col-md-12 ">
           <div class="page-header">
-            <h1 class="text-center">Maanu Konu <small>മാനു കോനു</small></h1>
+            <h1 class="text-center" ng-repeat="user in users" ng-if="user.id === currentuser">{{ user.firstname}} {{user.lastname}}</h1>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
-          <address>
+          <address ng-repeat="user in users" ng-if="user.id === currentuser">
             <strong><i class="fa fa-home fa-lg"></i> Malayali House</strong><br>
-            3 Richard Court<br>
-            Truro Road<br>
-            <i class="fa fa-phone"></i> 020 8881 7936
+            {{ user.ad1}}<br>
+            {{ user.ad2}}<br>
+            <i class="fa fa-phone"></i> {{ user.mob }}
           </address>
         </div>
         <div class="col-md-4">
           <p>Invoice no: <strong>{{invoicebill.id}}</strong></p>
           <p>Invoice Date: <strong>{{invoicebill.invoicedate}}</strong></p>
           <p>Invoice from: <strong>{{invoicebill.invoicefrom}}</strong></p>
-          <p>Invoice status: <span class="label label-danger">Pending</span></p>
+          <p>Invoice status: <span class="label text-capitalize" ng-class="{'paid':'label-success', 'pending':'label-danger', 'due':'label-info'}[invoicebill.status]">{{invoicebill.status}}</span></p>
         </div>
       </div>
       <div class="row">
@@ -31,7 +31,7 @@
               <tr>
                 <th>No.</th>
                 <th>Item</th>
-                <th>Price</th>
+                <th class="text-right">Price</th>
               </tr>
             </thead>
             <tbody>
@@ -41,33 +41,6 @@
                 <td class="text-right">{{invoiceprice.price | currency:"£"}}</td>
               </tr>
             </tbody>
-            <!-- <tbody>
-              <tr>
-                <td>1</td>
-                <td>Rent</td>
-                <td>£1200.00</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Mess</td>
-                <td>£50.56</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Broadband</td>
-                <td>£25.00</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Elactricy</td>
-                <td>£65.87</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Gas</td>
-                <td>£55.80</td>
-              </tr>
-            </tbody> -->
           </table>
         </div>
       </div>
@@ -81,15 +54,15 @@
           <table class="table table-bordered">
             <tr class="">
               <td>Sub total</td>
-              <td align="right">{{sum(invoicebill.invoiceprice , 'price') | currency:"£"}}</td>
+              <td align="right">{{invoicebill.invoiceprice | sum:'price' | currency:"£"}}</td>
             </tr>
             <tr class="success">
               <td>Your contribution</td>
-<td class="text-right" ng-repeat="user in users" ng-if="user.id === currentuser">{{ user.spent | currency:"£"}}</td>
+              <td align="right">{{invoicebill.contribution | currency:"£"}}</td>
             </tr>
             <tr class="">
               <td><strong>Total</strong></td>
-              <td align="right"><strong>£832.40</strong></td>
+              <td align="right"><strong>{{(invoicebill.invoiceprice | sum:'price') - invoicebill.contribution | currency:"£"}}</strong></td>
             </tr>
           </table>
         </div>

@@ -2,13 +2,13 @@
 var app = angular.module('roomApp',[ ]);
 app.controller('roomController', function($scope){
 	$scope.users = [
-		{ id: 1, firstname: 'Muhammed', lastname: 'Athimannil', spent: 206.98},
-		{ id: 2, firstname: 'Roshan', lastname: 'Ismail', spent: 12.23},
-		{ id: 3, firstname: 'Muhsin', lastname: 'Manniyil', spent: 302.12},
-		{ id: 4, firstname: 'Mohasin', lastname: 'Moorkote', spent: 18.21},
-		{ id: 5, firstname: 'Usharif', lastname: 'Kalathingal', spent: 85.85}
+		{ id: 1, firstname: 'Muhammed', lastname: 'Athimannil', ad1: '3 Richard Court', ad2: 'Truro Road', post: 'N22 8DL', mob: '07875506426', spent: 206.98},
+		{ id: 2, firstname: 'Roshan', lastname: 'Ismail', ad1: '3 Richard Court', ad2: 'Truro Road', post: 'N22 8DL', mob: '07875506426', spent: 12.23},
+		{ id: 3, firstname: 'Muhsin', lastname: 'Manniyil', ad1: '3 Richard Court', ad2: 'Truro Road', post: 'N22 8DL', mob: '07875506426', spent: 302.12},
+		{ id: 4, firstname: 'Mohasin', lastname: 'Moorkote', ad1: '3 Richard Court', ad2: 'Truro Road', post: 'N22 8DL', mob: '07875506426', spent: 18.21},
+		{ id: 5, firstname: 'Usharif', lastname: 'Kalathingal', ad1: '3 Richard Court', ad2: 'Truro Road', post: 'N22 8DL', mob: '07875506426', spent: 85.85}
 	];
-	$scope.currentuser = 4;
+	$scope.currentuser = 1;
 	$scope.lastspend = 1320.90;
 	$scope.todolist = [
 		{ id: 1, task: 'Some thing to do', asignedto: 1, done: false},
@@ -134,7 +134,8 @@ app.controller('roomController', function($scope){
 		    {item: 'Broadband', price: 25.00},
 		    {item: 'Electricity', price: 65.87},
 		    {item: 'Gas', price: 55.80}
-		]
+		],
+		contribution: 148.62
 	};
 });
 app.filter('percentage', ['$filter', function ($filter) {
@@ -148,5 +149,12 @@ app.filter('startFrom', function () {
     };
 });
 
+app.filter('sum', function(){
+	return function(items, prop){
+        return items.reduce(function(a, b){
+            return a + b[prop];
+        }, 0);
+    };
+});
 
 })();
