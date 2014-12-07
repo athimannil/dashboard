@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-6">
           Records per page
-          <select class="selectpicker" data-width="80px">
+          <select class="selectpicker" ng-model="pageSize">
             <option value="10">10</option>
             <option value="25">25</option>
             <option value="50">50</option>
