@@ -8,8 +8,8 @@
   ?>
     <div class="container-fluid">
     <?php
-      include_once 'dashboard.php';
-      // include_once 'expense.php';
+      // include_once 'dashboard.php';
+      include_once 'expense.php';
       // include_once 'recurring.php';
       // include_once 'invoice.php';
       // include_once 'userdetails.php';

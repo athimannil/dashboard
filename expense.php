@@ -107,7 +107,7 @@
                   <button type="button" class="btn btn-default" ng-hide="editmode" ng-click="editmode = !editmode">
                     <i class="fa fa-pencil"></i>
                   </button>
-                  <button type="button" class="btn btn-default" ng-hide="editmode">
+                  <button type="button" class="btn btn-default" ng-hide="editmode" ng-click="deleteitem($index)">
                     <i class="fa fa-trash-o"></i>
                   </button>
                   <button type="button" class="btn btn-default" ng-show="editmode" ng-click="editmode = !editmode">

@@ -68,6 +68,10 @@ app.controller('roomController', function($scope){
 	    { product: '44 mollit anim', date: '3-November-2014', rate: 45.00, member: 4, status: 'approved'}
 	];
 	$scope.editmode = false;
+	$scope.deleteitem = function (delItem) {
+	    $scope.items.splice(delItem, 1);
+		// alert(delItem);
+	};
 	// limit page items
     $scope.currentpage = 0;
     $scope.pageSize = 10;
