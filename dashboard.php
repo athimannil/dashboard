@@ -130,7 +130,8 @@
 
       <li class="list-group-item" ng-repeat="user in users">
         <span class="badge progress-bar-warning">{{percentage(user.spent, totalamount)}}%</span>
-        <img src="img/me.jpg" alt="member" height="40" width="40" class="img-circle pull-left">
+        <!-- <img src="img/me.jpg" alt="member" height="40" width="40" class="img-circle pull-left"> -->
+        <img ng-src="{{user.image}}" alt="{{user.firstname}} {{user.lastname}}" height="40" width="40" class="img-circle pull-left">
         {{user.firstname}} {{user.lastname}}
         <div class="progress">
           <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="{{percentage(user.spent, totalamount)}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percentage(user.spent, totalamount)}}%">

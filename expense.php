@@ -15,7 +15,7 @@
             <option value="50">50</option>
             <option value="100">100</option>
           </select>
-          Search <input type="text" class="form-control input-sm" placeholder="Search item" ng-model="searchitem" style="display: inline-block; width: 145px;">
+          Search <input type="search" class="form-control input-sm" placeholder="Search item" ng-model="searchitem" style="display: inline-block; width: 145px;">
         </div>
         <div class="col-md-6">
           <div class="btn-group pull-right">
