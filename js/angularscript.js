@@ -115,6 +115,15 @@ app.controller('roomController', function($scope){
     	return num.toFixed(2);
     };
 	$scope.totalamount = $scope.sum($scope.users, 'spent');
+	$scope.addrecur = {fixed: true,
+		recuringterm:[
+			{term: 'Daily'}, 
+			{term: 'Weekly'}, 
+			{term: 'Monthly'}, 
+			{term: 'Yearly'}
+		]
+	};
+	$scope.addrecur.recurterm = $scope.addrecur.recuringterm[2];
 	$scope.recurbills = [
 		{id: 1, recurterm:'Yearly', fixed: true, type:'Rent deposit', amount: 1200, due: '12-12-2014'},
 		{id: 2, recurterm:'Monthly', fixed: true, type:'Council Tax', amount: 321.80, due: '12-12-2014'},
@@ -124,7 +133,10 @@ app.controller('roomController', function($scope){
 	];
 	$scope.recurbill = function () {
 		$scope.recurbills.push({recurterm: $scope.addrecur.recurterm, fixed: $scope.addrecur.fixed, type: $scope.addrecur.type, amount: $scope.addrecur.amount, due: $scope.addrecur.due});
-		$scope.addrecur = '';
+		$scope.addrecur.type ='';
+		$scope.addrecur.fixed = true;
+		$scope.addrecur.amount = '';
+		$scope.addrecur.due = '';
 	};
 	$scope.invoicebill = {
 		id: 12, invoicefrom: '10-November-2014', invoicedate: '12-December-2014', status:'pending', rent: '1200',
@@ -148,7 +160,6 @@ app.filter('startFrom', function () {
         return input.slice(start);
     };
 });
-
 app.filter('sum', function(){
 	return function(items, prop){
         return items.reduce(function(a, b){
