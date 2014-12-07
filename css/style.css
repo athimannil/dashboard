@@ -48,19 +48,23 @@ body {
         color: #eb6a5a; }
 
 header {
-  width: 100%;
+  /*width: 100%;*/
   color: #FFF;
   background: #eb6a5a;
   border-bottom: 1px solid #ebebeb;
   margin-bottom: 10px;
-  float: left; }
+  /*float: left;*/ }
 
-#toggle-button {
+.toggle-button {
+  margin-left: -6px;
+
   border-radius: 0;
   border: none;
   padding: 10px 14px 14px;
   border-right: 1px solid #EE7F71; }
-
+#login-menu{
+  margin-right: -6px;
+}
 #login-menu:hover > a {
   background: #FFF;
   color: #eb6a5a; }

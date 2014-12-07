@@ -2,8 +2,7 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- <script src="js/bootstrap-select.js"></script> -->
 <script src="js/angular.min.js"></script>
-<!-- <script src="js/core.js"></script> -->
+<script src="js/core.js"></script>
 <script src="js/angularscript.js"></script>
-</body>
 </body>
 </html>
