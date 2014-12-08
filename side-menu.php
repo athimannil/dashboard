@@ -1,5 +1,5 @@
-<div id="sidebar-wrapper">
-    <ul class="sidebar-nav">
+<aside id="sidebar-wrapper" class="side-bar">
+    <ul class="sidebar-nav hide">
         <li class="sidebar-brand">
             <a href="#">
                 Start Bootstrap
@@ -27,15 +27,13 @@
             <a href="#">Contact</a>
         </li>
     </ul>
-</div>
-<!-- <aside id="side-bar">
-  <figure id="profile">
-    <a href="#"><img class="img-circle" src="img/me.jpg" width="130" height="130" alt="Maanu Manjeri"></a>
-    <figcaption>
-      <h3>maanu manjeri</h3>
-    </figcaption>
-  </figure>
-  <nav class="side-nav">
+  <nav class="side-nav sidebar-nav">
+    <figure id="profile">
+      <a href="#"><img class="img-circle" src="img/me.jpg" width="130" height="130" alt="Maanu Manjeri"></a>
+      <figcaption>
+        <h3>maanu manjeri</h3>
+      </figcaption>
+    </figure>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
       <li><a href="#"><i class="fa fa-shopping-cart"></i> Expenses</a></li>
@@ -46,4 +44,6 @@
       <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
     </ul>
   </nav>
+</aside>
+<!-- <aside id="side-bar">
 </aside> -->

@@ -12,17 +12,17 @@ body {
 .progress-mini {
   height: 10px; }
 
-#side-bar {
-  width: 250px;
-  height: 100%;
+.side-bar {
+  /*width: 250px;*/
+  /*height: 100%;*/
   background: #374A59;
-  float: left;
+  /*float: left;*/
   padding-top: 30px;
   color: #FFF;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  left: 0; }
+  /*overflow: auto;*/
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/ }
 
 #profile {
   padding-bottom: 10px;
