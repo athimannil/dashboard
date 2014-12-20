@@ -1,7 +1,7 @@
   <?php
     include_once 'header.php';
   ?>
-<div id="wrapper">
+<div id="wrapper" ng-class="menuStatus ? '' :'toggled'">
   <?php
     include_once 'side-menu.php';
   ?>

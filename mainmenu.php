@@ -1,6 +1,6 @@
 <header class="row">
   <div class="col-md-12">
-    <a id="menu-toggle" class="btn btn-primary pull-left toggle-button"><i class="fa fa-bars fa-lg"></i></a>
+    <a id="menu-toggle" class="btn btn-primary pull-left toggle-button" ng-click="toggleMenu();"><i class="fa fa-bars fa-lg"></i></a>
     <div id="login-menu" class="dropdown pull-right">
       <a data-toggle="dropdown" href="#"> 
         <img class="img-circle" src="img/me.jpg" width="30" height="30" alt="Maanu Manjeri">

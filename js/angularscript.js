@@ -1,6 +1,11 @@
 (function(){
 var app = angular.module('roomApp',[ ]);
 app.controller('roomController', function($scope){
+	// Toggle sede menu
+	$scope.menuStatus = true;
+	$scope.toggleMenu = function(){
+		$scope.menuStatus = $scope.menuStatus === false ? true : false;
+	};
 	$scope.users = [
 		{ id: 1, firstname: 'Muhammed', lastname: 'Athimannil', ad1: '3 Richard Court', ad2: 'Truro Road', post: 'N22 8DL', mob: '07875506426', image:"img/me.jpg", spent: 206.98},
 		{ id: 2, firstname: 'Roshan', lastname: 'Ismail', ad1: '3 Richard Court', ad2: 'Truro Road', post: 'N22 8DL', mob: '07875506426', image:"img/me.jpg", spent: 12.23},
