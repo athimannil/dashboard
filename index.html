@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="roomApp">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Room home page</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/simple-sidebar.css">
+  <link rel="stylesheet" href="css/bootstrap-select.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+</head>
+<body ng-controller="roomController">
+<div id="wrapper" ng-class="menuStatus ? '' :'toggled'">
+
+  <!-- Side menu  -->
+  <div ng-include="'side-menu.html'"></div>
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+
+	    <!-- Navigation bar -->
+	    <div ng-include="'mainmenu.html'"></div>
+
+	    <!-- ngView content -->
+        <!-- <div ng-include="'dashboard.html'"></div> -->
+        <div ng-include="'expense.html'"></div>
+        <!-- <div ng-include="'recurring.html'"></div> -->
+        <!-- <div ng-include="'invoice.html'"></div> -->
+        <!-- <div ng-include="'userdetails.html'"></div> -->
+        <!-- <div ng-include="'settings.html'"></div> -->
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="js/bootstrap-select.js"></script> -->
+<script src="js/angular.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/angularscript.js"></script>
+</body>
+</html>
