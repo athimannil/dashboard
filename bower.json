@@ -1,0 +1,24 @@
+{
+  "name": "dashboard",
+  "homepage": "https://github.com/athimannil/dashboard",
+  "authors": [
+    "Muhammed athimanil <hello@athimannil.com>"
+  ],
+  "description": "",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "angular-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.3",
+    "font-awesome": "^4.7.0"
+  }
+}
