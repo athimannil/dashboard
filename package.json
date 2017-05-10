@@ -1,0 +1,37 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "dashboard =========",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.0.1",
+    "css-mqpacker": "^6.0.0",
+    "cssnano": "^3.10.0",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "main-bower-files": "^2.13.1",
+    "webpack-stream": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athimannil/dashboard.git"
+  },
+  "author": "Muhammed Athimannil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athimannil/dashboard/issues"
+  },
+  "homepage": "https://github.com/athimannil/dashboard#readme"
+}
