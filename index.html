@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="roomApp">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,7 @@
 	<link href="/public/css/app.css" rel="stylesheet">
 </head>
 <body>
+	<nav class="side-nav" ng-include src="'public/side-nav.html'"></nav>
 <!-- 	<header></header>
   <div class="container-body">
     <main class="container-fluid" ui-view></main>
@@ -22,6 +23,7 @@
 	<div id="wrapper" ng-class="menuStatus ? '' :'toggled'">
 
 		<!-- Side menu  -->
+		<div ng-include="'./public/side-menu.html'"></div>
 		<div ng-include="'side-menu.html'"></div>
 		<div id="page-content-wrapper">
 			<div class="container-fluid">
@@ -47,7 +49,7 @@
 	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 	<!-- endinject -->
 	<!-- inject:js -->
-	<!-- app scripts will go here... -->
+	<script src="/resources/app/module.js"></script>
 	<!-- endinject -->
 </body>
 </html>
