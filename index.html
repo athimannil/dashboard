@@ -8,8 +8,7 @@
 	<link href="/public/css/app.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="side-nav" ng-include src="'public/side-nav.html'"></nav>
-<!-- 	<header></header>
+<header></header>
   <div class="container-body">
     <main class="container-fluid" ui-view></main>
 	<nav class="side-nav" ng-include src="'public/side-nav.html'"></nav>
@@ -19,28 +18,27 @@
   </div>
   <footer>
   	<h1>Footer</h1>
-  </footer> -->
-	<div id="wrapper" ng-class="menuStatus ? '' :'toggled'">
+  </footer>
+<!-- 	<div id="wrapper" ng-class="menuStatus ? '' :'toggled'">
 
-		<!-- Side menu  -->
-		<div ng-include="'./public/side-menu.html'"></div>
-		<div ng-include="'side-menu.html'"></div>
-		<div id="page-content-wrapper">
-			<div class="container-fluid">
+	Side menu
+	<div ng-include="'side-menu.html'"></div>
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
 
-				<!-- Navigation bar -->
-				<div ng-include="'mainmenu.html'"></div>
+			Navigation bar
+			<div ng-include="'mainmenu.html'"></div>
 
-				<!-- ngView content -->
-				<div ng-include="'dashboard.html'"></div>
-				<div ng-include="'expense.html'"></div>
-				<!-- <div ng-include="'recurring.html'"></div> -->
-				<!-- <div ng-include="'invoice.html'"></div> -->
-				<!-- <div ng-include="'userdetails.html'"></div> -->
-				<!-- <div ng-include="'settings.html'"></div> -->
-			</div>
+			ngView content
+			<div ng-include="'dashboard.html'"></div>
+			<div ng-include="'expense.html'"></div>
+			<div ng-include="'recurring.html'"></div>
+			<div ng-include="'invoice.html'"></div>
+			<div ng-include="'userdetails.html'"></div>
+			<div ng-include="'settings.html'"></div>
 		</div>
 	</div>
+</div> -->
 	<!-- bower:js -->
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
 	<script src="/bower_components/angular/angular.js"></script>
@@ -50,6 +48,8 @@
 	<!-- endinject -->
 	<!-- inject:js -->
 	<script src="/resources/app/module.js"></script>
+	<script src="/resources/app/dashboard/dashboardControl.js"></script>
+	<script src="/resources/app/config/route-config.js"></script>
 	<!-- endinject -->
 </body>
 </html>
