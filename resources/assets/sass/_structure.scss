@@ -1,0 +1,15 @@
+.form-control{
+	box-shadow: none;
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	&:focus{
+		box-shadow: none;
+	}
+}
+
+.box{
+	border: 1px solid $box-border;
+	padding: 10px;
+	// position: relative;
+	background: $white;
+	margin: 0 0 10px;
+}
