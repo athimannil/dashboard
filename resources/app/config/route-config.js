@@ -9,11 +9,11 @@ function config($stateProvider, $urlRouterProvider) {
       templateUrl: 'public/dashboard.html',
       controller: 'dashboardController'
     })
-    .state('expenses', {
-      url: '/expenses',
-      templateUrl: 'public/expenses.html',
-      controller: 'expensesController',
-      controllerAs: "expensectrl"
+    .state('expense', {
+      url: '/expense',
+      templateUrl: 'public/expense.html',
+      controller: 'expenseController',
+      controllerAs: "expensctrl"
     })
     .state('invoice', {
       url: '/invoice',
