@@ -8,7 +8,7 @@
 	<link href="/public/css/app.css" rel="stylesheet">
 </head>
 <body>
-<header></header>
+	<header class="navbar" ng-include src="'public/header.html'"></header>
   <div class="container-body">
     <main class="container-fluid" ui-view></main>
 	<nav class="side-nav" ng-include src="'public/side-nav.html'"></nav>
@@ -48,8 +48,8 @@
 	<!-- endinject -->
 	<!-- inject:js -->
 	<script src="/resources/app/module.js"></script>
-	<script src="/resources/app/settings/settingsController.js"></script>
 	<script src="/resources/app/reccurrbill/reccurrController.js"></script>
+	<script src="/resources/app/settings/settingsController.js"></script>
 	<script src="/resources/app/profile/peofileController.js"></script>
 	<script src="/resources/app/expense/expnseController.js"></script>
 	<script src="/resources/app/invoice/invoiceController.js"></script>

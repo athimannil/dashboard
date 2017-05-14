@@ -69,7 +69,7 @@ $nav-color: #BFC2C7;
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 // $font-family-base:        $font-family-sans-serif !default;
 //
-// $font-size-base:          14px !default;
+$font-size-base:          14px;
 // $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 //
@@ -81,9 +81,9 @@ $nav-color: #BFC2C7;
 // $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 //
 // //** Unit-less `line-height` for use in components like buttons.
-// $line-height-base:        1.428571429 !default; // 20/14
+$line-height-base:        1.428571429; // 20/14
 // //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-// $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 //
 // //** By default, this inherits from the `<body>`.
 // $headings-font-family:    inherit !default;
@@ -382,10 +382,11 @@ $nav-color: #BFC2C7;
 // //##
 //
 // // Basics of a navbar
-// $navbar-height:                    50px !default;
-// $navbar-margin-bottom:             $line-height-computed !default;
-// $navbar-border-radius:             $border-radius-base !default;
+$navbar-height: 46px;
+$navbar-margin-bottom: 0;
+$navbar-border-radius: 0;
 // $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+$navbar-padding-vertical: 8px;
 // $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 // $navbar-collapse-max-height:       340px !default;
 //
@@ -445,7 +446,7 @@ $nav-color: #BFC2C7;
 //
 // //=== Shared nav styles
 // $nav-link-padding:                          10px 15px !default;
-// $nav-link-hover-bg:                         $gray-lighter !default;
+$nav-link-hover-bg: darken($brand-primary, 10%);
 //
 // $nav-disabled-link-color:                   $gray-light !default;
 // $nav-disabled-link-hover-color:             $gray-light !default;
