@@ -2,6 +2,10 @@
   padding-top: 30px;
   background-color: $nav-bg;
 
+    &.show-nav{
+        display: none;
+    }
+
   h3{
     color: $white;
   }

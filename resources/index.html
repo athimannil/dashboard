@@ -9,16 +9,16 @@
 </head>
 <body>
 	<header class="navbar" ng-include src="'public/header.html'"></header>
-  <div class="container-body">
-    <main class="container-fluid" ui-view></main>
-	<nav class="side-nav" ng-include src="'public/side-nav.html'"></nav>
-    <aside class="right-list">
-    	<h1>Right Aside</h1>
-    </aside>
-  </div>
-  <footer>
-  	<h1>Footer</h1>
-  </footer>
+	<div class="container-body">
+    	<main class="container-fluid" ui-view></main>
+		<nav class="side-nav" ng-class="{'show-nav': showMenu}" ng-include src="'public/side-nav.html'"></nav>
+    	<aside class="right-list">
+    		<h1>Right Aside</h1>
+    	</aside>
+  	</div>
+	<footer>
+		<h1>Footer</h1>
+	</footer>
 <!-- 	<div id="wrapper" ng-class="menuStatus ? '' :'toggled'">
 
 	Side menu
