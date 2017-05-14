@@ -29,6 +29,13 @@ footer{
 .side-nav {
   order: -1;
 }
+
+/* Temporory */
+.container-body{
+	flex-direction: row;
+	flex: 1;
+	position: relative;
+}
 .right-list {
 	display: none;
 	background-color: deepskyblue;
@@ -36,12 +43,12 @@ footer{
 
 @media (min-width: $screen-sm-min) {
   .container-body {
-    flex-direction: row;
-    flex: 1;
+    /* flex-direction: row; */
+    /* flex: 1; */
   }
   main {
 	  margin-top: 20px;
-    flex: 1;
+	  flex: 1;
   }
   .side-nav, .right-list {
     // flex: 0 0 12em;
