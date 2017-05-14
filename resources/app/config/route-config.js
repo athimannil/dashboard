@@ -27,10 +27,10 @@ function config($stateProvider, $urlRouterProvider) {
         controller: 'messageboardController',
         controllerAs: 'msgctrl'
     })
-    .state('reccurr', {
+    .state('reccurrbill', {
         url: '/reccurrbill',
-        templateUrl: 'public/reccurrbill.html',
-        controller: 'reccurrbillController',
+        templateUrl: 'public/reccurr.html',
+        controller: 'reccurrController',
         controllerAs: 'reccurrctrl'
     })
     .state('profile', {
