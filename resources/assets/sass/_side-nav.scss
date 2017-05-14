@@ -1,9 +1,10 @@
 .side-nav{
-  padding-top: 30px;
-  background-color: $nav-bg;
-
+    width: 0;
+    padding-top: 30px;
+    background-color: $nav-bg;
+    overflow: hidden;
     &.show-nav{
-        display: none;
+        width: 250px;
     }
 
   h3{

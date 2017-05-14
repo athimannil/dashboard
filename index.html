@@ -7,17 +7,39 @@
 	<title>Online Booking App</title>
 	<link href="/public/css/app.css" rel="stylesheet">
 </head>
-<body>
-	<header class="navbar" ng-include src="'public/header.html'"></header>
+<body ng-controller="generalCtrl">
+	<header>
+		<a id="toggle-button" class="btn btn-primary toggle-button" ng-class="{'show-nav': showMenu}" ng-click="showMenu = !showMenu"><i class="fa fa-bars fa-lg"></i></a>
+		{{showMenu}}
+		<ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<img class="img-circle" src="img/me.jpg" width="30" height="30" alt="Maanu Manjeri">
+					മാനു കോനു <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a ui-sref="profile"><i class="fa fa-user"></i> Profile</a></li>
+					<li><a ui-sref="settings"><i class="fa fa-cogs"></i> Settings</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="logout.html"><i class="fa fa-power-off"></i> Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+
 	<div class="container-body">
     	<main class="container-fluid" ui-view></main>
+
 		<nav class="side-nav" ng-class="{'show-nav': showMenu}" ng-include src="'public/side-nav.html'"></nav>
-    	<aside class="right-list">
-    		<h1>Right Aside</h1>
+
+		<aside class="right-list">
+			<pre>{{showMenu | json}}</pre>
+			<h3 ng-click="showMenu = !showMenu">{{showMenu}}</h3>
     	</aside>
   	</div>
+
 	<footer>
-		<h1>Footer</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nihil provident dolores autem neque sapiente vitae.</p>
 	</footer>
 <!-- 	<div id="wrapper" ng-class="menuStatus ? '' :'toggled'">
 
@@ -49,12 +71,13 @@
 	<!-- inject:js -->
 	<script src="/resources/app/module.js"></script>
 	<script src="/resources/app/settings/settingsController.js"></script>
-	<script src="/resources/app/profile/peofileController.js"></script>
 	<script src="/resources/app/reccurrbill/reccurrController.js"></script>
+	<script src="/resources/app/profile/peofileController.js"></script>
 	<script src="/resources/app/invoice/invoiceController.js"></script>
+	<script src="/resources/app/general/route-config.js"></script>
+	<script src="/resources/app/general/generalController.js"></script>
 	<script src="/resources/app/expense/expnseController.js"></script>
 	<script src="/resources/app/dashboard/dashboardControl.js"></script>
-	<script src="/resources/app/config/route-config.js"></script>
 	<!-- endinject -->
 </body>
 </html>

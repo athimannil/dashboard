@@ -21,15 +21,16 @@ footer{
 }
 
 footer{
-	display: none;
+	/* display: none; */
+	background-color: tomato;
+	color: $white;
 }
 
 .side-nav {
-	width: 250px;
   order: -1;
 }
 .right-list {
-	display: none;
+	/* display: none; */
 	background-color: deepskyblue;
 }
 
